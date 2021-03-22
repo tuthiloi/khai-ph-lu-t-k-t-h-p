@@ -102,23 +102,31 @@ public class MyKnowledgeModel {
         
     }
     public Instances divideTrainTestR(Instances originalSet,double percent,boolean isTest) throws Exception{
+        
         Resample rs= new Resample ();
         rs.setNoReplacement(true);
+        rs.setSampleSizePercent(percent);
         rs.setInvertSelection(isTest);
         rs.setInputFormat(originalSet);
         return Filter.useFilter(originalSet, rs);
         
         
     }
+    public void saveModel(String filename,Object model) throws Exception{
+        weka.core.SerializationHelper.write(filename, model);
+    }
     
+    public Object loadModel(String filename) throws Exception{
+        return weka.core.SerializationHelper.read(filename);
+    }
     @Override
     public String toString() {
         return dataset.toSummaryString();
     }
 
-    private void newRemove() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//    private void newRemove() {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 
 }
 
