@@ -34,7 +34,7 @@ public class Wekapr {
 //      model.mineAssociationRule();
 //       System.out.println(model);
 //
-//       MyKnowledgeMo del model=new MyKnowledgeModel(
+//       MyKnowledgeModel model=new MyKnowledgeModel(
 //               "D:\\weka\\Weka-3-8-5\\data\\iris.arff",null,null);
 //       model.trainset=model.divideTrainTestR(model.dataset, 70, false);
 //       model.testset=model.divideTrainTestR(model.dataset, 70, true);
@@ -113,12 +113,12 @@ public class Wekapr {
 
         //phuongphap stacking
         
-        MyBlendingModel model = new MyBlendingModel("",null,null);
-        model.buildMyBlendingModel("C:\\Users\\Admin\\Desktop\\data-exp\\iris_train.arff");
-        model.evaluateBlendingModel("C:\\Users\\Admin\\Desktop\\data-exp\\iris_test.arff");
-        model.predictClassLabel("C:\\Users\\Admin\\Desktop\\data-exp\\iris_unlabel.arff", 
-               "C:\\Users\\Admin\\Desktop\\data-exp\\iris_predict_blending.arff");
-        System.out.println("Finished");
+//        MyBlendingModel model = new MyBlendingModel("",null,null);
+//        model.buildMyBlendingModel("C:\\Users\\Admin\\Desktop\\data-exp\\iris_train.arff");
+//        model.evaluateBlendingModel("C:\\Users\\Admin\\Desktop\\data-exp\\iris_test.arff");
+//        model.predictClassLabel("C:\\Users\\Admin\\Desktop\\data-exp\\iris_unlabel.arff", 
+//               "C:\\Users\\Admin\\Desktop\\data-exp\\iris_predict_blending.arff");
+//        System.out.println("Finished");
     }
 
 }
