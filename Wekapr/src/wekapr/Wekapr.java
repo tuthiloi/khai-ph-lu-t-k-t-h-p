@@ -119,6 +119,20 @@ public class Wekapr {
 //        model.predictClassLabel("C:\\Users\\Admin\\Desktop\\data-exp\\iris_unlabel.arff", 
 //               "C:\\Users\\Admin\\Desktop\\data-exp\\iris_predict_blending.arff");
 //        System.out.println("Finished");
+
+
+//
+       KMeansModel model = new KMeansModel("", null, null);
+         model.buildKMeansModel("C:\\Users\\Admin\\Desktop\\data-exp\\iris-cluster-train.arff");
+         model.predictCluster("C:\\Users\\Admin\\Desktop\\data-exp\\iris-cluster-unlabel.arff");
+         System.out.println("Finished");
+
+
+//
+//         MyEMModel model = new MyEMModel("", null, null);
+//         model.buildEMModel("C:\\Users\\Admin\\Desktop\\data-exp\\iris-cluster-train.arff");
+//         model.predictCluster("C:\\Users\\Admin\\Desktop\\data-exp\\iris-cluster-unlabel.arff");
+//         System.out.println("Finished");
     }
 
 }
